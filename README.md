@@ -7,4 +7,4 @@ I am a second year User Experience and Interaction Design student.
 I will be creating...
 
 ## AI Policy
-
+Allowed during development between check-ins; declare any AI tools you used in your README.md per the course AI Policy. NOT allowed during the check-in itself — you explain your own work in your own words.
