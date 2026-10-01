@@ -12,4 +12,6 @@ const profile = {
     hobbies,
     is_adult,
 }
-console.log(profile);
+
+console.log(profile)
+console.log('$profile.first_name} is an adult: ${profile.is_adult')
