@@ -13,5 +13,3 @@ const profile = {
     is_adult,
 }
 console.log(profile);
-/* multiple line comments
-// single line comments
