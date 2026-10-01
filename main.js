@@ -1,5 +1,5 @@
 console.log('show on console');
-const first_name = 'Grace'
+constfirst_name = 'Grace'
 console.log(first_name)
 console.log ('first_name = ${first_name}')
 console.log ('first_name = ' + first_name)
