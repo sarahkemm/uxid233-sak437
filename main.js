@@ -1,31 +1,88 @@
-const first_name = "Grace"
-const last_name = "Hopper"
-const age = 40;
-const greeting = `Hello, ${first_name} ${last_name} (${age}).`;
-const is_adult = age >= 18;
-const hobbies = ["coding", "sailing", "swimming", true, 13, ["one", "two", 3, 4, true]]
-
-const profile = {
-    age,
-    first_name,
-    last_name,
-    hobbies,
-    is_adult,
-}
-
-console.log(profile)
-console.log(`${first_name} is an adult: ${profile.is_adult}`)
-
-const my_users = [
+const zodiac_signs = [
     {
-        first_name: "Grace",
-        last_name: "Hopper",
-    },
+        name: 'capricorn', 
+        start_month: 12,
+        start_day: 22,
+        end_month: 1,
+        end_day: 19,
+    }
     {
-        first_name: "Sarah",
-        last_name: "Smith",
-    },
+        name: 'aquarius',
+        start_month: 1,
+        start_day: 20,
+        end_month: 2,
+        end_day: 18,
+    }
+    {
+        name: 'picses',
+        start_month: 2,
+        start_day: 19,
+        end_month: 3,
+        end_day: 20,
+    }
+    {
+        name: 'aries',
+        start_month: 3,
+        start_day: 21,
+        end_month: 4,
+        end_day: 19,
+    }
+    {
+        name: 'taurus',
+        start_month: 4,
+        start_day: 20,
+        end_month: 5,
+        end_day: 20,
+    }
+    {
+        name: 'gemini',
+        start_month: 5,
+        start_day: 21,
+        end_month: 6,
+        end_day: 21,
+    }
+    {
+        name: 'cancer',
+        start_month: 6,
+        start_day: 22,
+        end_month: 7,
+        end_day: 22,
+    }
+    {
+        name: 'leo',
+        start_month: 7,
+        start_day: 23,
+        end_month: 8,
+        end_day: 22,
+    }
+    {
+        name: 'virgo',
+        start_month: 8,
+        start_day: 23,
+        end_month: 9,
+        end_day: 22,
+    }
+    {
+        name: 'libra',
+        start_month: 9,
+        start_day: 23,
+        end_month: 10,
+        end_day: 22,
+    }
+    {
+        name: 'scorpio',
+        start_month: 10,
+        start_day: 23,
+        end_month: 11,
+        end_day: 21,
+    }
+    {
+        name: 'sagittarius',
+        start_month: 11,
+        start_day: 22,
+        end_month: 12,
+        end_day: 21,
+    }
 ]
 
-console.log(my_users)
-console.log(my_users[1].last_name)
+console.log(zodiac_signs);
