@@ -84,5 +84,7 @@ const zodiac_signs = [
         end_day: 21,
     },
 ]
-
-console.log(zodiac_signs);
+function play_sound (){
+    const ()
+}
+console.log(play_sound);
