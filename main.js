@@ -134,5 +134,4 @@ function save_last_sign () {
 }
 function change_color () {
     console.log('change_color: change the screen to the selected sign\'s color');
-}
-;
+};
