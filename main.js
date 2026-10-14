@@ -135,3 +135,9 @@ function save_last_sign () {
 function change_color () {
     console.log('change_color: change the screen to the selected sign\'s color');
 };
+
+play_sign_sound();
+find_sign();
+open_help_screen();
+save_last_sign();
+change_color();
