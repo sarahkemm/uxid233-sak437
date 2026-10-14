@@ -7,7 +7,7 @@ const zodiac_signs = [
         end_day: 19,
         sound: 'audio/capricorn.mp3',
         image: 'images/capricorn.png',
-        description:'tbd',
+        description:'Responsible with an inner sense of independence, they have a can do attitude',
     },
     {
         name: 'aquarius',
@@ -17,7 +17,7 @@ const zodiac_signs = [
         end_day: 18,
         sound: 'audio/aquarius.mp3',
         image: 'images/aquarius.png',
-        description: 'tbd',
+        description: 'Aquarians are adaptable and versatile, embracing change with open arms.They are known for their eccentricity and love for idealistic causes. They rely on their mind and need alone time to recharge',
     },
     {
         name: 'picses',
@@ -27,7 +27,7 @@ const zodiac_signs = [
         end_day: 20,
         sound: 'audio/picses.mp3',
         image: 'images/picses.png',
-        description: 'tbd',
+        description: 'Pisces are compassionate, artistic, and imaginative. They are very friendly and often find themselves in company of very different people. They are selfless and always willing to help others.',
     },
     {
         name: 'aries',
@@ -37,7 +37,7 @@ const zodiac_signs = [
         end_day: 19,
         sound: 'audio/aries.mp3',
         image: 'images/aries.png',
-        description: 'tbd',
+        description: 'Embodies action, energy, and competition. They are highly self-aware, have strong opinions and are always ready to defend them. ',
     },
     {
         name: 'taurus',
@@ -47,7 +47,7 @@ const zodiac_signs = [
         end_day: 20,
         sound: 'audio/taurus.mp3',
         image: 'images/taurus.png',
-        description: 'tbd',
+        description: 'Practical, sensual, and dependable Earth sign that values love and material pleasures. The most grounded zodiac sign, they love their routine and are committed to comfort.',
     },
     {
         name: 'gemini',
@@ -57,7 +57,7 @@ const zodiac_signs = [
         end_day: 21,
         sound: 'audio/gemini.mp3',
         image: 'images/gemini.png',
-        description: 'tbd',
+        description: 'Intelligent and perceptive. They can size up a person in a matter of seconds. They are renowned for their adaptability, curiosity, and thirst for knowledge.',
     },
     {
         name: 'cancer',
@@ -67,7 +67,7 @@ const zodiac_signs = [
         end_day: 22,
         sound: 'audio/cancer.mp3',
         image: 'images/cancer.png',
-        description: 'tbd',
+        description: 'They are highly sensitive, deeply caring, and feel everything deeply. Cancers attract friends and lovers through their loyalty, commitment, and emotional depth.',
     },
     {
         name: 'leo',
@@ -77,7 +77,7 @@ const zodiac_signs = [
         end_day: 22,
         sound: 'audio/leo.mp3',
         image: 'images/leo.png',
-        description: 'tbd',
+        description: 'Leos are bold, warm, and loving. They dont necessarily want to be worshipped, they just want to be recognized for their authentic selves. Leo often has many friends for they are generous and loyal.',
     },
     {
         name: 'virgo',
@@ -87,7 +87,7 @@ const zodiac_signs = [
         end_day: 22,
         sound: 'audio/virgo.mp3',
         image: 'images/virgo.png',
-        description: 'tbd',
+        description: 'Virgos are perceptive, analytical and driven by the need to feel useful.',
     },
     {
         name: 'libra',
@@ -97,7 +97,7 @@ const zodiac_signs = [
         end_day: 22,
         sound: 'audio/libra.mp3',
         image: 'images/libra.png',
-        description: 'tbd',
+        description: 'People born under the sign of Libra are peaceful, fair, and they hate being alone. Partnership is very important for them. Symbolized by the scales of balance, Libras are renowned for their captivating charm, quality elegance, and diplomatic spirit.',
     },
     {
         name: 'scorpio',
@@ -107,7 +107,7 @@ const zodiac_signs = [
         end_day: 21,
         sound: 'audio/scorpio.mp3',
         image: 'images/scorpio.png',
-        description: 'tbd',
+        description: 'Scorpio is the zodiac sign associated with intense, emotional depth. Scorpios are passionate, determined and great leaders who uncover truth, keep secrets, and combat dishonesty.',
     },
     {
         name: 'sagittarius',
@@ -117,7 +117,7 @@ const zodiac_signs = [
         end_day: 21,
         sound: 'audio/sagittarius.mp3',
         image: 'images/sagittarius.png',
-        description: 'tbd',
+        description: 'They will always choose principles over feelings and will often question who they are. Adventurous travelers with a strong moral compass and a misunderstood altruistic nature.',
     },
 ]
 function play_sign_sound () {
