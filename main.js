@@ -122,18 +122,21 @@ const zodiac_signs = [
 ]
 function play_sign_sound () {
     console.log('play_sign_sound: plays the selected sign\'s audio clip');
-}
+};
 function find_sign () {
     console.log('find_sign: finds the sign using the date of birth');
-}
+};
 function open_help_screen () {
     console.log('open_help_screen');
-}
+};
 function save_last_sign () {
     console.log('save_last_sign: saves the last sign that was entered');
-}
+};
 function change_color () {
     console.log('change_color: change the screen to the selected sign\'s color');
+};
+function show_description () {
+    console.log('show_description: tell user the description of their zodiac sign');
 };
 
 play_sign_sound();
@@ -141,3 +144,4 @@ find_sign();
 open_help_screen();
 save_last_sign();
 change_color();
+show_description();
