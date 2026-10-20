@@ -13,7 +13,6 @@ const zodiac_signs = [
         name: 'aquarius',
         start_month: 1,
         start_day: 20,
-        days_in_month: 31,
         end_month: 2,
         end_day: 18,
         sound: 'audio/aquarius.mp3',
@@ -144,7 +143,6 @@ function show_description () {
 };
 
 play_sign_sound();
-find_sign();
 open_help_screen();
 save_last_sign();
 change_color();
@@ -156,16 +154,17 @@ for (let i = 0; i < number_of_zodiac_in_array; i++) {
 
 function find_sign (month, day) {
     for (const zodiac_sign of zodiac_signs) {
-        const wraps = zodiac_sign.start_month > zodiac_sign.end_month;
 
-        if(!wraps && month >= zodiac_sign.start_month && month <= zodiac_sign.end_month && ((day >= zodiac_sign.start_day && day <= days_in_month) || (day <= zodiac_sign.end_day))){
+        if(month === zodiac_sign.start_month && day >= zodiac_sign.start_day || month === zodiac_sign.end_month && day <= zodiac_sign.end_day){
             return zodiac_sign.name;
         }
-        if (wraps && (month >= zodiac_sign.start_month || month <= zodiac_sign.end_month)) {
-            return zodiac_sign.name;
-        }
+    
     }
     return null;
     };
 
-find_sign(1, 22);
+console.log (find_sign(12, 21));
+console.log (find_sign(12, 22));
+console.log (find_sign(1, 19));
+console.log (find_sign(1, 20));
+console.log (find_sign(2, 20));
