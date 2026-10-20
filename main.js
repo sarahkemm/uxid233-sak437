@@ -168,4 +168,3 @@ console.log (find_sign(12, 22));
 console.log (find_sign(1, 19));
 console.log (find_sign(1, 20));
 console.log (find_sign(2, 20));
-console.log (find_sign(2,50));
