@@ -201,21 +201,9 @@ function find_sign(month,day) {
     
 };
 
-const zodiacname_ul = document.querySelector (`#zodiacname`)
-
-function add_zodiac (name) {
-    const li = document.createElement('li');
-    li.textContent = name;
-
-    if (zodiacname_ul) {
-        zodiacname_ul.append(li)
-    } else {
-        //do whatever
-    }
-}
-
-for (const zodiacname of zodiac_signs) {
-    add_zodiac(zodiacname.name)
-}
-
-console.log 
+zodiac_signs.forEach (zodiac => {
+    const p = document.createElement ('p');
+    p.textContent = zodiac.name;
+    const text = document.querySelector ('#text');
+    text.appendChild(p);
+}); 
