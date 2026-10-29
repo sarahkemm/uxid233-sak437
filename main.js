@@ -184,3 +184,38 @@ console.log (find_sign(1, 20));
 console.log (find_sign(2, 20));
 
 console.log (find_sign(2,30));
+
+function find_sign(month,day) {
+    const li = document.createElement('li')
+    li.textContent = name;
+    for (const zodiac_sign of zodiac_signs) {
+        const in_start_month = month === zodiac_sign.start_month && day >= zodiac_sign.start_day && day <= zodiac_sign.start_month_days;
+        const in_end_month = month === zodiac_sign.end_month && day <= zodiac_sign.end_day;
+
+        if(in_start_month || in_end_month) {
+            return zodiac_sign.name;
+        }
+    
+    }
+    return null;
+    
+};
+
+const zodiacname_ul = document.querySelector (`#zodiacname`)
+
+function add_zodiac (name) {
+    const li = document.createElement('li');
+    li.textContent = name;
+
+    if (zodiacname_ul) {
+        zodiacname_ul.append(li)
+    } else {
+        //do whatever
+    }
+}
+
+for (const zodiacname of zodiac_signs) {
+    add_zodiac(zodiacname.name)
+}
+
+console.log 
