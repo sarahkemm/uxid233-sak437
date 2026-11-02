@@ -201,9 +201,49 @@ function find_sign(month,day) {
     
 };
 
-zodiac_signs.forEach (zodiac => {
-    const p = document.createElement ('p');
-    p.textContent = zodiac.name;
-    const text = document.querySelector ('#text');
-    text.appendChild(p);
-}); 
+//zodiac_signs.forEach (zodiac => {
+//    const p = document.createElement ('p');
+//    p.textContent = zodiac.name;
+//    const text = document.querySelector ('#text');
+//    text.appendChild(p);
+//});
+
+const form = document.querySelector('#date');
+
+form.addEventListener('submit', event => {
+    event.preventDefault()
+    
+    const values = Object.fromEntries(new FormData(form));
+    const errors = validate(values);
+
+    if (errors.length >0) {
+        show_errors(errors);
+        return;
+    }
+
+    console.log(values)
+});
+
+function validate(values) {
+    const errors = [];
+    
+    const birth = new Date(values.birthday);
+    if (birth > new Date()) {
+        errors.push('Birthday cannot be in the future.');
+    }
+    return errors;
+};
+
+function show_errors(errors) {
+    const list = document.querySelector('.errors');
+    list.replaceChildren();
+
+    errors.forEach(message => {
+        const li = document.createElement('li');
+        li.textContent = message;
+        list.appendChild(li);
+    });
+    
+    list.hidden = errors.length === 0;
+}
+
