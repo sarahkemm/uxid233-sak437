@@ -135,6 +135,13 @@ const zodiac_signs = [
 
 const number_of_zodiac_in_array = zodiac_signs.length
 
+const text = JSON.stringify(zodiac_signs);
+
+const zodiac = JSON.parse(text);
+
+console.log(zodiac.name);
+console.log(zodiac.description);
+
 function play_sign_sound () {
     console.log('play_sign_sound: plays the selected sign\'s audio clip');
 };
@@ -201,28 +208,47 @@ function find_sign(month,day) {
     
 };
 
-//zodiac_signs.forEach (zodiac => {
-//    const p = document.createElement ('p');
-//    p.textContent = zodiac.name;
-//    const text = document.querySelector ('#text');
-//    text.appendChild(p);
-//});
 
+const output = document.querySelector('#output');
 const form = document.querySelector('#date');
+const date_input = document.querySelector('#birthday')
+const selected_date = new Date(date_input.value)
+const date_get = selected_date.getDate();
+const month_get = selected_date.getMonth();
+
+function get_sign(month_get, date_get) {
+    for (const zodiac_sign of zodiac_signs){
+        const in_start_month = month_get === zodiac_sign.start_month && date_get >= zodiac_sign.start_day && date_get <= zodiac_sign.start_month_days;
+        const in_end_month = month_get === zodiac_sign.end_month && date_get <= zodiac_sign.end_day;
+        if(in_start_month || in_end_month) {
+            return zodiac_sign.name;
+        }
+    
+    }
+    return null;
+    
+};
+
+form.addEventListener ('submit', function() {
+    event.preventDefault()
+    const selected_date = new Date(date_input.value)
+    const date_get = selected_date.getDate() +1;
+    const month_get = selected_date.getMonth() +1;
+    const zodiac_sign = get_sign(month_get, date_get);
+    output.textContent = `Your zodiac sign is ${zodiac_sign}.`;
+});
+
 
 form.addEventListener('submit', event => {
     event.preventDefault()
     
     const values = Object.fromEntries(new FormData(form));
     const errors = validate(values);
-
-    if (errors.length >0) {
-        show_errors(errors);
-        return;
-    }
-
+    
     console.log(values)
 });
+
+
 
 function validate(values) {
     const errors = [];
@@ -245,5 +271,4 @@ function show_errors(errors) {
     });
     
     list.hidden = errors.length === 0;
-}
-
+};

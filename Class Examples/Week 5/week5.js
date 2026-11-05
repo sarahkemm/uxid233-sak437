@@ -28,3 +28,4 @@ const all_items = document.querySelectorAll(`#list li`)
 const done_items = document.querySelectorAll(`#list li.done`)
 
 console.log(`${done_items.length} of ${all_items.length} done`)
+
