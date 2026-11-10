@@ -1,0 +1,13 @@
+:root {
+    --color-background: #dce5f2;
+}
+
+body {
+	background-color: var(--color-background);
+}
+
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('Oswald/Oswald-VariableFont_wght.ttf') format('ttf');
+}

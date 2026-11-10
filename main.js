@@ -6,9 +6,11 @@ const zodiac_signs = [
         start_month_days: 31,
         end_month: 1,
         end_day: 19,
+        character: 'Christina Yang',
         sound: 'audio/capricorn.mp3',
-        image: 'images/capricorn.png',
+        image: 'images/christina.webp',
         description:'Responsible with an inner sense of independence, they have a can do attitude',
+
     },
     {
         name: 'aquarius',
@@ -17,8 +19,9 @@ const zodiac_signs = [
         start_month_days: 31,
         end_month: 2,
         end_day: 18,
+        character: 'Amelia Sheperd',
         sound: 'audio/aquarius.mp3',
-        image: 'images/aquarius.png',
+        image: 'images/ameliasheperd.jpg',
         description: 'Aquarians are adaptable and versatile, embracing change with open arms.They are known for their eccentricity and love for idealistic causes. They rely on their mind and need alone time to recharge',
     },
     {
@@ -28,8 +31,9 @@ const zodiac_signs = [
         start_month_days: 28,
         end_month: 3,
         end_day: 20,
+        character: 'Lexie Grey',
         sound: 'audio/picses.mp3',
-        image: 'images/picses.png',
+        image: 'images/lexiegrey.jpg',
         description: 'Pisces are compassionate, artistic, and imaginative. They are very friendly and often find themselves in company of very different people. They are selfless and always willing to help others.',
     },
     {
@@ -39,8 +43,9 @@ const zodiac_signs = [
         start_month_days: 31,
         end_month: 4,
         end_day: 19,
+        character: 'Alex Karev',
         sound: 'audio/aries.mp3',
-        image: 'images/aries.png',
+        image: 'images/alex_karev.webp',
         description: 'Embodies action, energy, and competition. They are highly self-aware, have strong opinions and are always ready to defend them. ',
     },
     {
@@ -50,6 +55,7 @@ const zodiac_signs = [
         start_month_days: 30,
         end_month: 5,
         end_day: 20,
+        character: 'Preston Burke',
         sound: 'audio/taurus.mp3',
         image: 'images/taurus.png',
         description: 'Practical, sensual, and dependable Earth sign that values love and material pleasures. The most grounded zodiac sign, they love their routine and are committed to comfort.',
@@ -61,8 +67,9 @@ const zodiac_signs = [
         start_month_days: 31,
         end_month: 6,
         end_day: 21,
+        character: 'Richard Webber',
         sound: 'audio/gemini.mp3',
-        image: 'images/gemini.png',
+        image: 'images/chief_webber.jpg',
         description: 'Intelligent and perceptive. They can size up a person in a matter of seconds. They are renowned for their adaptability, curiosity, and thirst for knowledge.',
     },
     {
@@ -72,6 +79,7 @@ const zodiac_signs = [
         start_month_days: 30,
         end_month: 7,
         end_day: 22,
+        character: 'Izzie Stevens',
         sound: 'audio/cancer.mp3',
         image: 'images/cancer.png',
         description: 'They are highly sensitive, deeply caring, and feel everything deeply. Cancers attract friends and lovers through their loyalty, commitment, and emotional depth.',
@@ -83,6 +91,7 @@ const zodiac_signs = [
         start_month_days: 31,
         end_month: 8,
         end_day: 22,
+        character: 'Derek Sheperd',
         sound: 'audio/leo.mp3',
         image: 'images/leo.png',
         description: 'Leos are bold, warm, and loving. They dont necessarily want to be worshipped, they just want to be recognized for their authentic selves. Leo often has many friends for they are generous and loyal.',
@@ -94,8 +103,9 @@ const zodiac_signs = [
         start_month_days: 31,
         end_month: 9,
         end_day: 22,
+        character: 'Miranda Bailey',
         sound: 'audio/virgo.mp3',
-        image: 'images/virgo.png',
+        image: 'images/mirandabailey.jpg',
         description: 'Virgos are perceptive, analytical and driven by the need to feel useful.',
     },
     {
@@ -105,6 +115,7 @@ const zodiac_signs = [
         start_month_days: 30,
         end_month: 10,
         end_day: 22,
+        character: 'George or Addison',
         sound: 'audio/libra.mp3',
         image: 'images/libra.png',
         description: 'People born under the sign of Libra are peaceful, fair, and they hate being alone. Partnership is very important for them. Symbolized by the scales of balance, Libras are renowned for their captivating charm, quality elegance, and diplomatic spirit.',
@@ -116,8 +127,9 @@ const zodiac_signs = [
         start_month_days: 31,
         end_month: 11,
         end_day: 21,
+        character: 'Meredith Grey',
         sound: 'audio/scorpio.mp3',
-        image: 'images/scorpio.png',
+        image: 'images/meredith_grey.jpg',
         description: 'Scorpio is the zodiac sign associated with intense, emotional depth. Scorpios are passionate, determined and great leaders who uncover truth, keep secrets, and combat dishonesty.',
     },
     {
@@ -127,8 +139,9 @@ const zodiac_signs = [
         start_month_days: 30,
         end_month: 12,
         end_day: 21,
+        character: 'Mark Sloan',
         sound: 'audio/sagittarius.mp3',
-        image: 'images/sagittarius.png',
+        image: 'images/mark_sloan.webp',
         description: 'They will always choose principles over feelings and will often question who they are. Adventurous travelers with a strong moral compass and a misunderstood altruistic nature.',
     },
 ]
@@ -232,12 +245,11 @@ function get_sign(month_get, date_get) {
 form.addEventListener ('submit', function() {
     event.preventDefault()
     const selected_date = new Date(date_input.value)
-    const date_get = selected_date.getDate() +1;
-    const month_get = selected_date.getMonth() +1;
+    const date_get = selected_date.getDate();
+    const month_get = selected_date.getMonth()+1;
     const zodiac_sign = get_sign(month_get, date_get);
     output.textContent = `Your zodiac sign is ${zodiac_sign}.`;
 });
-
 
 form.addEventListener('submit', event => {
     event.preventDefault()
@@ -247,8 +259,6 @@ form.addEventListener('submit', event => {
     
     console.log(values)
 });
-
-
 
 function validate(values) {
     const errors = [];
