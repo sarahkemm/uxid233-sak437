@@ -1,13 +1,59 @@
 :root {
-    --color-background: #dce5f2;
+    --color-background: white;
+	--font-size-heading: 1rem;
 }
 
 body {
 	background-color: var(--color-background);
+	font-family: 'Arial Narrow';
+}
+
+h1, h2 {
+	font-size: var(--font-size-heading);
+}
+
+#head {
+	background-color: #7f9bba;
+	width: fit-content;
+	padding: 1rem 2rem .5rem 2rem;
+	margin-bottom: 0rem; 
+	border-radius: 15px 15px 0px 0px;
+	color: white;
+}
+
+button {
+	margin: 0rem .5rem;
 }
 
 
-@font-face {
-	font-family: 'Oswald';
-	src: url('Oswald/Oswald-VariableFont_wght.ttf') format('ttf');
+#box {
+	background: #dce5f2;
+	margin-top: 0rem;
+	padding: 1rem 0rem 1rem 1rem;
+}
+
+.box {
+	background: #ebebeb;
+	width: fit-content;
+	height: fit-content;
+	border: 1px solid #434242;
+	padding: 1rem 1rem;
+}
+
+
+h3 {
+	margin: 0rem 0rem 2rem 0rem;
+}
+
+#outlinebox {
+	padding: 1rem .25rem;
+	background: #7f9bba;
+}
+
+
+#toprow {
+	display: flex;
+	direction: row;
+	gap: 2rem;
+	margin: 0rem 0rem 1rem 0rem;
 }

@@ -115,7 +115,7 @@ const zodiac_signs = [
         start_month_days: 30,
         end_month: 10,
         end_day: 22,
-        character: 'George or Addison',
+        character: 'Addison Montgomery',
         sound: 'audio/libra.mp3',
         image: 'images/libra.png',
         description: 'People born under the sign of Libra are peaceful, fair, and they hate being alone. Partnership is very important for them. Symbolized by the scales of balance, Libras are renowned for their captivating charm, quality elegance, and diplomatic spirit.',
@@ -260,25 +260,11 @@ form.addEventListener('submit', event => {
     console.log(values)
 });
 
-function validate(values) {
-    const errors = [];
-    
-    const birth = new Date(values.birthday);
-    if (birth > new Date()) {
-        errors.push('Birthday cannot be in the future.');
-    }
-    return errors;
-};
 
-function show_errors(errors) {
-    const list = document.querySelector('.errors');
-    list.replaceChildren();
+zodiac_signs.forEach(zodiac => {
+    const button = document.createElement('button');
+    button.textContent = zodiac.name;
+    const buttons = document.querySelector('#buttonplace');
+    buttons.appendChild(button)
+})
 
-    errors.forEach(message => {
-        const li = document.createElement('li');
-        li.textContent = message;
-        list.appendChild(li);
-    });
-    
-    list.hidden = errors.length === 0;
-};

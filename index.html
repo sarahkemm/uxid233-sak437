@@ -3,33 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zodiac</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     
-    <h1>
-        Find out what Grey's Anatomy character you are based on your zodiac sign!
-    </h1>
-   
+        
+    <h1 id="head"> Zodiac </h1>
+
+    <div id="outlinebox">
+    <section id="box">
+    <section id="toprow">
+    <div class ="box">
+        <h3>Patient Profile</h3>
+        <img src = "images/profilepic.jpg" alt="unknown or blank profile picture" width="200" height="200">
+    </div>
+
+    <section id="secondcolumn">
+    <div class="box">
+    <h3> Enter patient's birthday to find their zodiac profile</h3>    
+
     <form id="date">
         <label for="birthday">Birthday</label>
         <input id="birthday" name="birthday" type="date" required min="0000-01-01" max="3000-12-31"/>
 
-        <button type="submit">Submit</button>
+        <button id=submit type="submit">Submit</button>
     </form>
+    </div>
 
-    <p id="output"> 
+    <p id="output"></p>
 
-    </p>
+    </section>
+    </section>
 
-    <ul class="errors hidden"></ul>
-
-    <p id="description"> </p>
-
-    <output> </output>
-
-    <section type="container"> </section>
+    <section id="buttonplace"> </section>
+    </section>
+    </div>
 
  <script src="main.js"></script>
 </body>
