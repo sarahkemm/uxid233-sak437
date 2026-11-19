@@ -42,6 +42,7 @@ button {
 	height: fit-content;
 	border: 1px solid #434242;
 	padding: 1rem 1rem;
+	margin-bottom: 1rem;
 }
 
 
@@ -60,4 +61,10 @@ h3 {
 	direction: row;
 	gap: 2rem;
 	margin: 0rem 0rem 1rem 0rem;
+}
+
+img {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
 }

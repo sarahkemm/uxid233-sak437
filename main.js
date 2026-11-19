@@ -45,7 +45,7 @@ const zodiac_signs = [
         end_day: 19,
         character: 'Alex Karev',
         sound: 'audio/ambulance.mp3',
-        image: 'images/alex_karev.webp',
+        image: 'images/alexkarev.jpg',
         description: 'Embodies action, energy, and competition. They are highly self-aware, have strong opinions and are always ready to defend them. ',
     },
     {
@@ -57,7 +57,7 @@ const zodiac_signs = [
         end_day: 20,
         character: 'Preston Burke',
         sound: 'audio/ambulance.mp3',
-        image: 'images/taurus.png',
+        image: 'images/burke.jpg',
         description: 'Practical, sensual, and dependable Earth sign that values love and material pleasures. The most grounded zodiac sign, they love their routine and are committed to comfort.',
     },
     {
@@ -81,7 +81,7 @@ const zodiac_signs = [
         end_day: 22,
         character: 'Izzie Stevens',
         sound: 'audio/ambulance.mp3',
-        image: 'images/cancer.png',
+        image: 'images/izziestevens.jpg',
         description: 'They are highly sensitive, deeply caring, and feel everything deeply. Cancers attract friends and lovers through their loyalty, commitment, and emotional depth.',
     },
     {
@@ -93,7 +93,7 @@ const zodiac_signs = [
         end_day: 22,
         character: 'Derek Sheperd',
         sound: 'audio/ambulance.mp3',
-        image: 'images/leo.png',
+        image: 'images/dereksheperd.webp',
         description: 'Leos are bold, warm, and loving. They dont necessarily want to be worshipped, they just want to be recognized for their authentic selves. Leo often has many friends for they are generous and loyal.',
     },
     {
@@ -105,7 +105,7 @@ const zodiac_signs = [
         end_day: 22,
         character: 'Miranda Bailey',
         sound: 'audio/ambulance.mp3',
-        image: 'images/mirandabailey.jpg',
+        image: 'images/miranda_bailey.jpg',
         description: 'Virgos are perceptive, analytical and driven by the need to feel useful.',
     },
     {
@@ -117,7 +117,7 @@ const zodiac_signs = [
         end_day: 22,
         character: 'Addison Montgomery',
         sound: 'audio/ambulance.mp3',
-        image: 'images/libra.png',
+        image: 'images/addisonmont.jpg',
         description: 'People born under the sign of Libra are peaceful, fair, and they hate being alone. Partnership is very important for them. Symbolized by the scales of balance, Libras are renowned for their captivating charm, quality elegance, and diplomatic spirit.',
     },
     {
@@ -263,6 +263,7 @@ zodiac_signs.forEach(zodiac => {
         console.log(zodiac.name);
         output.textContent = `${zodiac.description}`;
         patientname.textContent = `${zodiac.character}`;
+        patientimage.src = `${zodiac.image}`
     })
     const buttons = document.querySelector('#buttonplace');
     buttons.appendChild(button);
