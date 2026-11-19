@@ -9,7 +9,7 @@ const zodiac_signs = [
         character: 'Christina Yang',
         sound: 'audio/ambulance.mp3',
         image: 'images/christina.webp',
-        description:'Responsible with an inner sense of independence, they have a can do attitude',
+        description:'Responsible with an inner sense of independence, they have a can do attitude.',
 
     },
     {
@@ -22,7 +22,7 @@ const zodiac_signs = [
         character: 'Amelia Sheperd',
         sound: 'audio/ambulance.mp3',
         image: 'images/ameliasheperd.jpg',
-        description: 'Aquarians are adaptable and versatile, embracing change with open arms.They are known for their eccentricity and love for idealistic causes. They rely on their mind and need alone time to recharge',
+        description: 'Aquarians are adaptable and versatile, embracing change with open arms.They are known for their eccentricity and love for idealistic causes. They rely on their mind and need alone time to recharge.',
     },
     {
         name: 'picses',
@@ -193,6 +193,7 @@ const date_get = selected_date.getDate();
 const month_get = selected_date.getMonth();
 const all_sounds = [];
 const audio_files = [];
+const patientimage = document.querySelector('#patientimage');
 
 const button = document.querySelector('#play');
 const stop = document.querySelector('#stop');
@@ -223,7 +224,7 @@ function get_sign(month_get, date_get) {
         const sign = (in_start_month || in_end_month)
 
         if(sign) {
-           return zodiac_sign.character
+           return zodiac_sign;
         }
     
     }
@@ -231,14 +232,18 @@ function get_sign(month_get, date_get) {
     
 };
 
-form.addEventListener ('submit', function() {
+
+
+form.addEventListener ('submit', function(event) {
     event.preventDefault()
     const selected_date = new Date(date_input.value)
     const date_get = selected_date.getDate();
     const month_get = selected_date.getMonth()+1;
     const zodiac_sign = get_sign(month_get, date_get);
-    output.textContent = `You are ${zodiac_sign}.`;
-    patientname.textContent = `${zodiac_sign}`;
+    console.log (zodiac_sign);
+    output.textContent = `${zodiac_sign.description}.`;
+    patientname.textContent = `${zodiac_sign.character}`;
+    patientimage.src = `${zodiac_sign.image}`;
 
 });
 
@@ -256,6 +261,8 @@ zodiac_signs.forEach(zodiac => {
     button.type = 'button';
     button.addEventListener ('click', () => {
         console.log(zodiac.name);
+        output.textContent = `${zodiac.description}`;
+        patientname.textContent = `${zodiac.character}`;
     })
     const buttons = document.querySelector('#buttonplace');
     buttons.appendChild(button);
