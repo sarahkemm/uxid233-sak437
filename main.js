@@ -7,7 +7,7 @@ const zodiac_signs = [
         end_month: 1,
         end_day: 19,
         character: 'Christina Yang',
-        sound: 'audio/capricorn.mp3',
+        sound: 'audio/ambulance.mp3',
         image: 'images/christina.webp',
         description:'Responsible with an inner sense of independence, they have a can do attitude',
 
@@ -20,7 +20,7 @@ const zodiac_signs = [
         end_month: 2,
         end_day: 18,
         character: 'Amelia Sheperd',
-        sound: 'audio/aquarius.mp3',
+        sound: 'audio/ambulance.mp3',
         image: 'images/ameliasheperd.jpg',
         description: 'Aquarians are adaptable and versatile, embracing change with open arms.They are known for their eccentricity and love for idealistic causes. They rely on their mind and need alone time to recharge',
     },
@@ -32,7 +32,7 @@ const zodiac_signs = [
         end_month: 3,
         end_day: 20,
         character: 'Lexie Grey',
-        sound: 'audio/picses.mp3',
+        sound: 'audio/ambulance.mp3',
         image: 'images/lexiegrey.jpg',
         description: 'Pisces are compassionate, artistic, and imaginative. They are very friendly and often find themselves in company of very different people. They are selfless and always willing to help others.',
     },
@@ -44,7 +44,7 @@ const zodiac_signs = [
         end_month: 4,
         end_day: 19,
         character: 'Alex Karev',
-        sound: 'audio/aries.mp3',
+        sound: 'audio/ambulance.mp3',
         image: 'images/alex_karev.webp',
         description: 'Embodies action, energy, and competition. They are highly self-aware, have strong opinions and are always ready to defend them. ',
     },
@@ -56,7 +56,7 @@ const zodiac_signs = [
         end_month: 5,
         end_day: 20,
         character: 'Preston Burke',
-        sound: 'audio/taurus.mp3',
+        sound: 'audio/ambulance.mp3',
         image: 'images/taurus.png',
         description: 'Practical, sensual, and dependable Earth sign that values love and material pleasures. The most grounded zodiac sign, they love their routine and are committed to comfort.',
     },
@@ -68,7 +68,7 @@ const zodiac_signs = [
         end_month: 6,
         end_day: 21,
         character: 'Richard Webber',
-        sound: 'audio/gemini.mp3',
+        sound: 'audio/ambulance.mp3',
         image: 'images/chief_webber.jpg',
         description: 'Intelligent and perceptive. They can size up a person in a matter of seconds. They are renowned for their adaptability, curiosity, and thirst for knowledge.',
     },
@@ -80,7 +80,7 @@ const zodiac_signs = [
         end_month: 7,
         end_day: 22,
         character: 'Izzie Stevens',
-        sound: 'audio/cancer.mp3',
+        sound: 'audio/ambulance.mp3',
         image: 'images/cancer.png',
         description: 'They are highly sensitive, deeply caring, and feel everything deeply. Cancers attract friends and lovers through their loyalty, commitment, and emotional depth.',
     },
@@ -92,7 +92,7 @@ const zodiac_signs = [
         end_month: 8,
         end_day: 22,
         character: 'Derek Sheperd',
-        sound: 'audio/leo.mp3',
+        sound: 'audio/ambulance.mp3',
         image: 'images/leo.png',
         description: 'Leos are bold, warm, and loving. They dont necessarily want to be worshipped, they just want to be recognized for their authentic selves. Leo often has many friends for they are generous and loyal.',
     },
@@ -104,7 +104,7 @@ const zodiac_signs = [
         end_month: 9,
         end_day: 22,
         character: 'Miranda Bailey',
-        sound: 'audio/virgo.mp3',
+        sound: 'audio/ambulance.mp3',
         image: 'images/mirandabailey.jpg',
         description: 'Virgos are perceptive, analytical and driven by the need to feel useful.',
     },
@@ -116,7 +116,7 @@ const zodiac_signs = [
         end_month: 10,
         end_day: 22,
         character: 'Addison Montgomery',
-        sound: 'audio/libra.mp3',
+        sound: 'audio/ambulance.mp3',
         image: 'images/libra.png',
         description: 'People born under the sign of Libra are peaceful, fair, and they hate being alone. Partnership is very important for them. Symbolized by the scales of balance, Libras are renowned for their captivating charm, quality elegance, and diplomatic spirit.',
     },
@@ -128,7 +128,7 @@ const zodiac_signs = [
         end_month: 11,
         end_day: 21,
         character: 'Meredith Grey',
-        sound: 'audio/scorpio.mp3',
+        sound: 'audio/ambulance.mp3',
         image: 'images/meredith_grey.jpg',
         description: 'Scorpio is the zodiac sign associated with intense, emotional depth. Scorpios are passionate, determined and great leaders who uncover truth, keep secrets, and combat dishonesty.',
     },
@@ -140,7 +140,7 @@ const zodiac_signs = [
         end_month: 12,
         end_day: 21,
         character: 'Mark Sloan',
-        sound: 'audio/sagittarius.mp3',
+        sound: 'audio/ambulance.mp3',
         image: 'images/mark_sloan.webp',
         description: 'They will always choose principles over feelings and will often question who they are. Adventurous travelers with a strong moral compass and a misunderstood altruistic nature.',
     },
@@ -184,57 +184,46 @@ for (let i = 0; i < number_of_zodiac_in_array; i++) {
     console.log(`${i+1}. ${zodiac_signs[i].name}`)
 };
 
-function find_sign (month, day) {
-    for (const zodiac_sign of zodiac_signs) {
-        const in_start_month = month === zodiac_sign.start_month && day >= zodiac_sign.start_day && day <= zodiac_sign.start_month_days;
-        const in_end_month = month === zodiac_sign.end_month && day <= zodiac_sign.end_day;
-
-        if(in_start_month || in_end_month) {
-            return zodiac_sign.name;
-        }
-    
-    }
-    return null;
-    };
-
-console.log (find_sign(12, 21));
-console.log (find_sign(12, 22));
-console.log (find_sign(1, 19));
-console.log (find_sign(1, 20));
-console.log (find_sign(2, 20));
-
-console.log (find_sign(2,30));
-
-function find_sign(month,day) {
-    const li = document.createElement('li')
-    li.textContent = name;
-    for (const zodiac_sign of zodiac_signs) {
-        const in_start_month = month === zodiac_sign.start_month && day >= zodiac_sign.start_day && day <= zodiac_sign.start_month_days;
-        const in_end_month = month === zodiac_sign.end_month && day <= zodiac_sign.end_day;
-
-        if(in_start_month || in_end_month) {
-            return zodiac_sign.name;
-        }
-    
-    }
-    return null;
-    
-};
-
-
 const output = document.querySelector('#output');
+const patientname = document.querySelector('#patientname');
 const form = document.querySelector('#date');
 const date_input = document.querySelector('#birthday')
 const selected_date = new Date(date_input.value)
 const date_get = selected_date.getDate();
 const month_get = selected_date.getMonth();
+const all_sounds = [];
+const audio_files = [];
+
+const button = document.querySelector('#play');
+const stop = document.querySelector('#stop');
+const audio = new Audio('audio/ambulance.mp3');
+all_sounds.push(audio);
+
+function stop_all_sounds(){
+    for (const sound of all_sounds) {
+        sound.pause();
+        sound.currentTime = 0;
+    }
+};
+
+button.addEventListener('click', () => {
+    stop_all_sounds();
+    audio.play();
+});
+
+stop.addEventListener('click', () => {
+    stop_all_sounds();
+})
+
 
 function get_sign(month_get, date_get) {
     for (const zodiac_sign of zodiac_signs){
         const in_start_month = month_get === zodiac_sign.start_month && date_get >= zodiac_sign.start_day && date_get <= zodiac_sign.start_month_days;
         const in_end_month = month_get === zodiac_sign.end_month && date_get <= zodiac_sign.end_day;
-        if(in_start_month || in_end_month) {
-            return zodiac_sign.name;
+        const sign = (in_start_month || in_end_month)
+
+        if(sign) {
+           return zodiac_sign.character
         }
     
     }
@@ -248,23 +237,26 @@ form.addEventListener ('submit', function() {
     const date_get = selected_date.getDate();
     const month_get = selected_date.getMonth()+1;
     const zodiac_sign = get_sign(month_get, date_get);
-    output.textContent = `Your zodiac sign is ${zodiac_sign}.`;
+    output.textContent = `You are ${zodiac_sign}.`;
+    patientname.textContent = `${zodiac_sign}`;
+
 });
 
 form.addEventListener('submit', event => {
     event.preventDefault()
     
     const values = Object.fromEntries(new FormData(form));
-    const errors = validate(values);
     
-    console.log(values)
+    console.log(values);
 });
-
 
 zodiac_signs.forEach(zodiac => {
     const button = document.createElement('button');
     button.textContent = zodiac.name;
+    button.type = 'button';
+    button.addEventListener ('click', () => {
+        console.log(zodiac.name);
+    })
     const buttons = document.querySelector('#buttonplace');
-    buttons.appendChild(button)
-})
-
+    buttons.appendChild(button);
+});

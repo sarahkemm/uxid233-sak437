@@ -3,6 +3,10 @@
 	--font-size-heading: 1rem;
 }
 
+*{
+	box-sizing: border-box
+}
+
 body {
 	background-color: var(--color-background);
 	font-family: 'Arial Narrow';
