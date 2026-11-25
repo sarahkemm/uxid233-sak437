@@ -7,7 +7,7 @@ const zodiac_signs = [
         end_month: 1,
         end_day: 19,
         character: 'Christina Yang',
-        sound: 'audio/ambulance.mp3',
+        sound: 'audio/hospitaldeath.mp3',
         image: 'images/christina.webp',
         description:'Responsible with an inner sense of independence, they have a can do attitude.',
 
@@ -20,7 +20,7 @@ const zodiac_signs = [
         end_month: 2,
         end_day: 18,
         character: 'Amelia Sheperd',
-        sound: 'audio/ambulance.mp3',
+        sound: 'audio/conversation.mp3',
         image: 'images/ameliasheperd.jpg',
         description: 'Aquarians are adaptable and versatile, embracing change with open arms.They are known for their eccentricity and love for idealistic causes. They rely on their mind and need alone time to recharge.',
     },
@@ -32,7 +32,7 @@ const zodiac_signs = [
         end_month: 3,
         end_day: 20,
         character: 'Lexie Grey',
-        sound: 'audio/ambulance.mp3',
+        sound: 'audio/rollingcart.mp3',
         image: 'images/lexiegrey.jpg',
         description: 'Pisces are compassionate, artistic, and imaginative. They are very friendly and often find themselves in company of very different people. They are selfless and always willing to help others.',
     },
@@ -44,7 +44,7 @@ const zodiac_signs = [
         end_month: 4,
         end_day: 19,
         character: 'Alex Karev',
-        sound: 'audio/ambulance.mp3',
+        sound: 'audio/heartbeat.mp3',
         image: 'images/alexkarev.jpg',
         description: 'Embodies action, energy, and competition. They are highly self-aware, have strong opinions and are always ready to defend them. ',
     },
@@ -56,7 +56,7 @@ const zodiac_signs = [
         end_month: 5,
         end_day: 20,
         character: 'Preston Burke',
-        sound: 'audio/ambulance.mp3',
+        sound: 'audio/foodcart.mp3',
         image: 'images/burke.jpg',
         description: 'Practical, sensual, and dependable Earth sign that values love and material pleasures. The most grounded zodiac sign, they love their routine and are committed to comfort.',
     },
@@ -68,7 +68,7 @@ const zodiac_signs = [
         end_month: 6,
         end_day: 21,
         character: 'Richard Webber',
-        sound: 'audio/ambulance.mp3',
+        sound: 'audio/heartrate.mp3',
         image: 'images/chief_webber.jpg',
         description: 'Intelligent and perceptive. They can size up a person in a matter of seconds. They are renowned for their adaptability, curiosity, and thirst for knowledge.',
     },
@@ -80,7 +80,7 @@ const zodiac_signs = [
         end_month: 7,
         end_day: 22,
         character: 'Izzie Stevens',
-        sound: 'audio/ambulance.mp3',
+        sound: 'audio/ekg.mp3',
         image: 'images/izziestevens.jpg',
         description: 'They are highly sensitive, deeply caring, and feel everything deeply. Cancers attract friends and lovers through their loyalty, commitment, and emotional depth.',
     },
@@ -92,7 +92,7 @@ const zodiac_signs = [
         end_month: 8,
         end_day: 22,
         character: 'Derek Sheperd',
-        sound: 'audio/ambulance.mp3',
+        sound: 'audio/inflator.mp3',
         image: 'images/dereksheperd.webp',
         description: 'Leos are bold, warm, and loving. They dont necessarily want to be worshipped, they just want to be recognized for their authentic selves. Leo often has many friends for they are generous and loyal.',
     },
@@ -116,7 +116,7 @@ const zodiac_signs = [
         end_month: 10,
         end_day: 22,
         character: 'Addison Montgomery',
-        sound: 'audio/ambulance.mp3',
+        sound: 'audio/cough.mp3',
         image: 'images/addisonmont.jpg',
         description: 'People born under the sign of Libra are peaceful, fair, and they hate being alone. Partnership is very important for them. Symbolized by the scales of balance, Libras are renowned for their captivating charm, quality elegance, and diplomatic spirit.',
     },
@@ -128,7 +128,7 @@ const zodiac_signs = [
         end_month: 11,
         end_day: 21,
         character: 'Meredith Grey',
-        sound: 'audio/ambulance.mp3',
+        sound: 'audio/sneeze.mp3',
         image: 'images/meredith_grey.jpg',
         description: 'Scorpio is the zodiac sign associated with intense, emotional depth. Scorpios are passionate, determined and great leaders who uncover truth, keep secrets, and combat dishonesty.',
     },
@@ -140,7 +140,7 @@ const zodiac_signs = [
         end_month: 12,
         end_day: 21,
         character: 'Mark Sloan',
-        sound: 'audio/ambulance.mp3',
+        sound: 'audio/beeping.mp3',
         image: 'images/mark_sloan.webp',
         description: 'They will always choose principles over feelings and will often question who they are. Adventurous travelers with a strong moral compass and a misunderstood altruistic nature.',
     },
@@ -241,7 +241,7 @@ form.addEventListener ('submit', function(event) {
     const month_get = selected_date.getMonth()+1;
     const zodiac_sign = get_sign(month_get, date_get);
     console.log (zodiac_sign);
-    output.textContent = `${zodiac_sign.description}.`;
+    output.textContent = `${zodiac_sign.description}`;
     patientname.textContent = `${zodiac_sign.character}`;
     patientimage.src = `${zodiac_sign.image}`;
 
