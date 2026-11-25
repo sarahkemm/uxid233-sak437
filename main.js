@@ -193,28 +193,26 @@ const date_get = selected_date.getDate();
 const month_get = selected_date.getMonth();
 const all_sounds = [];
 const audio_files = [];
-const patientimage = document.querySelector('#patientimage');
-
-const button = document.querySelector('#play');
 const stop = document.querySelector('#stop');
-const audio = new Audio('audio/ambulance.mp3');
-all_sounds.push(audio);
+
+const patientimage = document.querySelector('#patientimage');
 
 function stop_all_sounds(){
     for (const sound of all_sounds) {
         sound.pause();
         sound.currentTime = 0;
-    }
-};
+}};
 
-button.addEventListener('click', () => {
+function soundify (zound) {
+    const audio = new Audio(zound);
+
     stop_all_sounds();
     audio.play();
-});
+};
 
 stop.addEventListener('click', () => {
     stop_all_sounds();
-})
+});
 
 
 function get_sign(month_get, date_get) {
@@ -244,7 +242,7 @@ form.addEventListener ('submit', function(event) {
     output.textContent = `${zodiac_sign.description}`;
     patientname.textContent = `${zodiac_sign.character}`;
     patientimage.src = `${zodiac_sign.image}`;
-
+    soundify(zodiac_sign.sound);
 });
 
 form.addEventListener('submit', event => {
@@ -257,14 +255,18 @@ form.addEventListener('submit', event => {
 
 zodiac_signs.forEach(zodiac => {
     const button = document.createElement('button');
+
     button.textContent = zodiac.name;
     button.type = 'button';
     button.addEventListener ('click', () => {
         console.log(zodiac.name);
         output.textContent = `${zodiac.description}`;
         patientname.textContent = `${zodiac.character}`;
-        patientimage.src = `${zodiac.image}`
+        patientimage.src = `${zodiac.image}`;
+        
+        soundify(zodiac.sound);
     })
     const buttons = document.querySelector('#buttonplace');
     buttons.appendChild(button);
 });
+
